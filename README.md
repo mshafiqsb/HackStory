@@ -1,2 +1,1 @@
-# HackStory
-Advanced Threat's Stories
+# Advanced Threat's Stories
