@@ -1,5 +1,5 @@
 # Mifare Classic is dead
-#### Why you should not build a business on Mifare Classic or .
+#### Why companies should stop Mifare Classic and Replay Attack can cause overdose of coffee.
 
 ##### Disclaimer
 I'm not responsible of what people try to do, do or hope to do. But in any event, always wondering if what you do does not make you cross the line between passion and absolute evil.
