@@ -176,6 +176,8 @@ On s'attache au process suspendu et on dump le PE à l'image base 00400000.
 
 ![runpe3](./img/runpe3.jpg)
 
+Ce qui nous donne un nouveau binaire tout beau, tout propre :3
+
 ## III ) Strcmp et final round
 
 Sur ce binaire, EAX provient de argv0.
