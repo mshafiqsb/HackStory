@@ -5,6 +5,7 @@ Bonjour à tous,
 Ce papier est un pas à pas pour résoudre le challenge *RunPE* de la catégorie *Cracking* du site www.root-me.org.
 
 Nécessaire :
+
 * Ollydbg v2
 * [OllyDumpEx Plugin](http://low-priority.appspot.com/ollydumpex/)
 * Un cerveau avec des connaissances sur [RunPE](https://gist.github.com/tfairane/034167792e8d1b044273)
@@ -12,6 +13,7 @@ Nécessaire :
 ## 0 ) Je ne suis pas UPX
 
 Malgré le nom des sections et les magics, le binaire n'a pas été packet par UPX et PEID nous le confirme.
+
 ![runpe1](./img/runpe1.jpg)
 
 ## I ) BP * `call eax`
@@ -164,6 +166,7 @@ Malgré le nom des sections et les magics, le binaire n'a pas été packet par U
 ## II ) BP sur kernel32.ResumeThread et DUMP du PE
 
 On va utiliser deux instances de Ollydbg :
+
 * La première va s'arrêter sur kernel32.ResumeThread.
 * La seconde instance de Ollygdb va s'attacher au processus suspendu et dumper le binaire.
 
