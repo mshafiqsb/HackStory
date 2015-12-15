@@ -12,7 +12,7 @@ Nécessaire :
 
 ## 0 ) Je ne suis pas UPX
 Malgré le nom des sections et les magics, le binaire n'a pas été packet par UPX et PEID nous le confirme.
-[./img/runpe1.jpg](runpe1)
+![runpe1](./img/runpe1.jpg)
 
 ## I ) BP * `call eax`
 
@@ -164,4 +164,4 @@ Malgré le nom des sections et les magics, le binaire n'a pas été packet par U
 ## I ) Stop sur kernel32.ResumeThread et DUMP du PE
 
 Lorsque l'on est sur 
-[./img/runpe2.jpg](runpe2)
+![runpe2](./img/runpe2.jpg)
