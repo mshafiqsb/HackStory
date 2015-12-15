@@ -160,7 +160,7 @@ Malgré le nom des sections et les magics, le binaire n'a pas été packet par U
 0018FF80   000003E8  è    ; \Time = 1000. ms
 ```
 
-## I ) Stop sur kernel32.ResumeThread et DUMP du PE
+## II ) BP sur kernel32.ResumeThread et DUMP du PE
 
 On va utiliser deux instances de Ollydbg :
 * La première va s'arrêter sur kernel32.ResumeThread.
@@ -168,3 +168,24 @@ On va utiliser deux instances de Ollydbg :
 
 ![runpe2](./img/runpe2.jpg)
 ![runpe3](./img/runpe3.jpg)
+
+## III ) Strcmp et final round
+
+Sur ce binaire, EAX provient de argv0.
+
+```
+00401527  |.  68 79214000   PUSH OFFSET 00402179                     ; /string2 = "sc>?650xEVD0}_E0&!)"
+0040152C  |.  50            PUSH EAX                                 ; |string1
+0040152D  |.  E8 A2020000   CALL <JMP.&msvcrt.strcmp>                ; \MSVCRT.strcmp
+```
+
+```
+00401527  |.  68 79214000   PUSH OFFSET 00402179                     ; string2 = "D4mned_It's_N0t_UPX"
+0040152C      90            NOP
+0040152D      E8 56FFFFFF   CALL 00401488
+```
+
+```
+00402179  44 34 6D 6E|65 64 5F 49|74 27 73 5F|4E 30 74 5F| D4mned_It's_N0t_
+00402189  55 50 58 00|                                     UPX
+```
