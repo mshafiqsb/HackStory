@@ -8,7 +8,7 @@ PS : comment le nom l'indique, c'est un format PE.
 Nécessaire :
 * Ollydbg v2
 * OllyDumpEx Plugin http://low-priority.appspot.com/ollydumpex/
-* Un cerveau avec des connaissances sur RunPE
+* Un cerveau avec des connaissances sur [RunPE](https://gist.github.com/tfairane/034167792e8d1b044273)
 
 ## 0 ) Je ne suis pas UPX
 Malgré le nom des sections et les magics, le binaire n'a pas été packet par UPX et PEID nous le confirme.
