@@ -3,7 +3,6 @@
 Bonjour à tous,
 
 Ce papier est un pas à pas pour résoudre le challenge *RunPE* de la catégorie *Cracking* du site www.root-me.org.
-PS : comment le nom l'indique, c'est un format PE.
 
 Nécessaire :
 * Ollydbg v2
@@ -168,3 +167,4 @@ On va utiliser deux instances de Ollydbg :
 * La seconde instance de Ollygdb va s'attacher au processus suspendu et dumper le binaire.
 
 ![runpe2](./img/runpe2.jpg)
+![runpe3](./img/runpe3.jpg)
