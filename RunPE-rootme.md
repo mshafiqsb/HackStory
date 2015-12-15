@@ -10,6 +10,7 @@ Nécessaire :
 * Un cerveau avec des connaissances sur [RunPE](https://gist.github.com/tfairane/034167792e8d1b044273)
 
 ## 0 ) Je ne suis pas UPX
+
 Malgré le nom des sections et les magics, le binaire n'a pas été packet par UPX et PEID nous le confirme.
 ![runpe1](./img/runpe1.jpg)
 
@@ -167,6 +168,9 @@ On va utiliser deux instances de Ollydbg :
 * La seconde instance de Ollygdb va s'attacher au processus suspendu et dumper le binaire.
 
 ![runpe2](./img/runpe2.jpg)
+
+On s'attache au process suspendu et on dump le PE à l'image base 00400000.
+
 ![runpe3](./img/runpe3.jpg)
 
 ## III ) Strcmp et final round
@@ -179,13 +183,21 @@ Sur ce binaire, EAX provient de argv0.
 0040152D  |.  E8 A2020000   CALL <JMP.&msvcrt.strcmp>                ; \MSVCRT.strcmp
 ```
 
+On fait un appel sur la fonction func_00401488 qui permet de décoder la data.
+
 ```
 00401527  |.  68 79214000   PUSH OFFSET 00402179                     ; string2 = "D4mned_It's_N0t_UPX"
 0040152C      90            NOP
 0040152D      E8 56FFFFFF   CALL 00401488
 ```
 
+Et on a gentillement le flag qui s'affiche dans ECX.
+
 ```
 00402179  44 34 6D 6E|65 64 5F 49|74 27 73 5F|4E 30 74 5F| D4mned_It's_N0t_
 00402189  55 50 58 00|                                     UPX
 ```
+
+Cordialement,
+
+@tfairane
