@@ -163,5 +163,8 @@ Malgré le nom des sections et les magics, le binaire n'a pas été packet par U
 
 ## I ) Stop sur kernel32.ResumeThread et DUMP du PE
 
-Lorsque l'on est sur 
+On va utiliser deux instances de Ollydbg :
+* La première va s'arrêter sur kernel32.ResumeThread.
+* La seconde instance de Ollygdb va s'attacher au processus suspendu et dumper le binaire.
+
 ![runpe2](./img/runpe2.jpg)
