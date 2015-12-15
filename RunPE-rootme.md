@@ -191,7 +191,7 @@ Sur ce binaire, EAX provient de argv0.
 On fait un appel sur la fonction func_00401488 qui permet de décoder la data.
 
 ```
-00401527  |.  68 79214000   PUSH OFFSET 00402179                     ; string2 = "D4mned_It's_N0t_UPX"
+00401527  |.  68 79214000   PUSH OFFSET 00402179                     ; string2 = "sc>?650xEVD0}_E0&!)"
 0040152C      90            NOP
 0040152D      E8 56FFFFFF   CALL 00401488
 ```
