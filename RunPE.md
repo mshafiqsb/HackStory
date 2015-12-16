@@ -173,7 +173,7 @@ Ce qui nous donne un nouveau binaire tout beau, tout propre :3
 Sur ce binaire, EAX provient de argv0.
 
 ```
-00401527  |.  68 79214000   PUSH OFFSET 00402179                     ; /string2 = "sc>?650xEVD0}_E0&!)"
+00401527  |.  68 79214000   PUSH OFFSET 00402179                     ; /string2 = "encodedshit"
 0040152C  |.  50            PUSH EAX                                 ; |string1
 0040152D  |.  E8 A2020000   CALL <JMP.&msvcrt.strcmp>                ; \MSVCRT.strcmp
 ```
@@ -181,7 +181,7 @@ Sur ce binaire, EAX provient de argv0.
 On fait un appel sur la fonction func_00401488 qui permet de décoder la data.
 
 ```
-00401527  |.  68 79214000   PUSH OFFSET 00402179                     ; string2 = "sc>?650xEVD0}_E0&!)"
+00401527  |.  68 79214000   PUSH OFFSET 00402179                     ; string2 = "encodedshit"
 0040152C      90            NOP
 0040152D      E8 56FFFFFF   CALL 00401488
 ```
