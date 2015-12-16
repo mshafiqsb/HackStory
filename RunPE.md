@@ -1,7 +1,5 @@
 # RunPE (*Cracking*)
 
-Bonjour à tous,
-
 No comment
 
 Nécessaire :
