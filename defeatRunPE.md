@@ -1,18 +1,10 @@
-# RunPE (*Cracking*)
-
-No comment
+# How to defeat RunPE Packer
 
 Nécessaire :
 
 * Ollydbg v2
 * [OllyDumpEx Plugin](http://low-priority.appspot.com/ollydumpex/)
 * Un cerveau avec des connaissances sur [RunPE](https://gist.github.com/tfairane/034167792e8d1b044273)
-
-## 0 ) Je ne suis pas UPX
-
-Malgré le nom des sections et les magics, le binaire n'a pas été packet par UPX et PEID nous le confirme.
-
-![runpe1](./img/runpe1.jpg)
 
 ## I ) BP * `call eax`
 
@@ -197,8 +189,8 @@ On fait un appel sur la fonction func_00401488 qui permet de décoder la data.
 Et on a gentillement le flag qui s'affiche dans ECX.
 
 ```
-00402179  44 34 6D 6E|65 64 5F 49|74 27 73 5F|4E 30 74 5F| D4mned_It's_N0t_
-00402189  55 50 58 00|                                     UPX
+00402179  FF LL AA GG|FF LL AA GG|FF LL AA GG|FF LL AA GG| FLAG
+00402189  FF LL AA GG|                                     FLAG
 ```
 
 [@tfairane](https://twitter.com/tfairane)
