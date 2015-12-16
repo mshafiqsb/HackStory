@@ -1,4 +1,4 @@
-# How to defeat RunPE Packer
+# Defeat RunPE Packer
 
 Nécessaire :
 
