@@ -178,7 +178,7 @@ EAX est argv0.
 0040152D  |.  E8 A2020000   CALL <JMP.&msvcrt.strcmp>                ; \MSVCRT.strcmp
 ```
 
-On fait appel à la fonction func_00401488 qui va nous permettre de déchifrrer la cipher.
+On fait appel à la fonction func_00401488 qui va nous permettre de déchiffrer la cipher.
 
 ```
 00401527  |.  68 79214000   PUSH OFFSET 00402179                     ; string2 = "encodedshit"
