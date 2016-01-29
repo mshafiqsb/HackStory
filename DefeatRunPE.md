@@ -178,7 +178,7 @@ Ici, EAX est l'input de argv0.
 0040152D  |.  E8 A2020000   CALL <JMP.&msvcrt.strcmp>                ; \MSVCRT.strcmp
 ```
 
-On fait un appel sur la fonction func_00401488 pour déchiffrer la cipher en paramètre.
+On fait appel à la fonction func_00401488 pour déchiffrer la cipher en paramètre.
 
 ```
 00401527  |.  68 79214000   PUSH OFFSET 00402179                     ; string2 = "sc>?650xEVD0}_E0&!)"
