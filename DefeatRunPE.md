@@ -173,24 +173,25 @@ Ce qui nous donne un nouveau binaire tout beau, tout propre :3
 EAX est argv0.
 
 ```
-00401527  |.  68 79214000   PUSH OFFSET 00402179                     ; /string2 = "encodedshit"
-0040152C  |.  50            PUSH EAX                                 ; |string1
+00401527  |.  68 79214000   PUSH OFFSET 00402179                     ; /string2 = "sc>?650xEVD0}_E0&!)"
+0040152C  |.  50            PUSH EAX                                 ; |string1 ; argv0
 0040152D  |.  E8 A2020000   CALL <JMP.&msvcrt.strcmp>                ; \MSVCRT.strcmp
 ```
 
 On fait appel à la fonction func_00401488 qui va nous permettre de déchiffrer la cipher.
 
 ```
-00401527  |.  68 79214000   PUSH OFFSET 00402179                     ; string2 = "encodedshit"
+00401527  |.  68 79214000   PUSH OFFSET 00402179                     ; string2 = "D4mned_It's_N0t_UPX"
 0040152C      90            NOP
 0040152D      E8 56FFFFFF   CALL 00401488
 ```
 
 Et on a gentillement le flag qui s'affiche dans ECX.
 
+
 ```
-00402179  FF LL AA GG|FF LL AA GG|FF LL AA GG|FF LL AA GG| FLAG
-00402189  FF LL AA GG|                                     FLAG
+00402179  44 34 6D 6E|65 64 5F 49|74 27 73 5F|4E 30 74 5F| D4mned_It's_N0t_
+00402189  55 50 58 00|                                     UPX
 ```
 
 End.
