@@ -2,5 +2,5 @@
 
 :) just fun, no stress
 
-[https://github.com/tfairane/HackStory/blob/master/DefeatRunPE.md](Defeat RunPE Challenge)
-[https://github.com/tfairane/HackStory/blob/master/McAfeePrivesc.md](McAfee leads to Active Directory Privilege Escalation)
+[Defeat RunPE Challenge](https://github.com/tfairane/HackStory/blob/master/DefeatRunPE.md)
+[McAfee leads to Active Directory Privilege Escalation](https://github.com/tfairane/HackStory/blob/master/McAfeePrivesc.md)
