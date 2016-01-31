@@ -16,22 +16,56 @@ The SiteList.xml contains credentials, domain name servers, ... it looks like th
 ...
 <HttpSite Type="fallback" Name="McAfeeHttp" Order="26" Enabled="1" Local="0" Server="update.nai.com:80">
 <RelativePath>Products/CommonUpdater</RelativePath><UseAuth>0</UseAuth>
-<UserName></UserName><Password Encrypted="1">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</Password></HttpSite>
+<UserName></UserName><Password Encrypted="1">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</Password>
+</HttpSite>
 ...
 <UNCSite Type="repository" Name="Paris" Order="13" Server="paris001" Enabled="1" Local="0">
 <ShareName>Repository$</ShareName><RelativePath></RelativePath><UseLoggedonUserAccount>0</UseLoggedonUserAccount>
 <DomainName>companydomain</DomainName>
-<UserName>McAfeeUser</UserName>
+<UserName>McAfeeService</UserName>
 <Password Encrypted="1">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</Password>
 </UNCSite>
 ...
 <UNCSite Type="repository" Name="Tokyo" Order="18" Server="tokyo000" Enabled="1" Local="0">
 <ShareName>Repository$</ShareName><RelativePath></RelativePath><UseLoggedonUserAccount>0</UseLoggedonUserAccount>
 <DomainName>companydomain</DomainName>
-<UserName>McAfeeUser</UserName>
+<UserName>McAfeeService</UserName>
 <Password Encrypted="1">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</Password>
 </UNCSite>
 ...
 </SiteList></ns:SiteLists>
+```
+
+
+```
+PS C:\Users\TAirane> net user McAfeeService /domain
+The request will be processed at a domain controller for domain companydomain. 
+
+User name                     McAfeeService
+Full Name                     McAfee ePO
+Comment                       Service Account for ePO Replication
+User's comment
+Country/region code           000 (System Default)
+Account active                Yes
+Account expires               Never
+Password last set             29/01/2007 16:03:12
+Password expires              Never
+Password changeable           29/01/2007 16:03:12
+Password required             Yes
+User may change password      Yes
+
+Workstations allowed          All
+Logon script
+User profile
+Home directory
+Last logon                    29/01/2016 17:55:09
+
+Logon hours allowed           All
+
+Local Group Memberships       *All Repository*Repository
+Global Group memberships      *Domain Services Account*Workstations Administrator
+                              *Servers Administrator*Domain Users
+                              
+The command completed successfully. 
 ```
 
