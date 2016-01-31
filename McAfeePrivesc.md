@@ -5,9 +5,9 @@ During an intern pentest, I came accross a nice way to privesc in an Active Dire
 
 I owned an employee's laptop with McAfee Virusscan Enterprise 8.8 installed.
 
-Mcafee has a feature to customize update servers. It can connect to these servers via HTTP or SMB.
+Mcafee has a feature to customize update servers and can connect to these servers via HTTP or SMB.
 
-The SiteList.xml contains credentials, domain name servers, ... it looks like this :
+The SiteList.xml contains juicy informations like credentials, domain name servers, ... it looks like this :
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -36,6 +36,7 @@ The SiteList.xml contains credentials, domain name servers, ... it looks like th
 </SiteList></ns:SiteLists>
 ```
 
+let's check which rights we got with *McAfeeService* :
 
 ```
 PS C:\Users\TAirane> net user McAfeeService /domain
