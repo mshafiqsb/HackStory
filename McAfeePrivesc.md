@@ -86,7 +86,7 @@ At this time, I knew that It was close. I edited the file like I could force an 
 </SiteList></ns:SiteLists>
 ```
 
-And *Responder* [enters the matrix](https://www.youtube.com/watch?v=NEuZgK669zY) :
+[And *Responder* enters the matrix](https://www.youtube.com/watch?v=NEuZgK669zY) :
 
 ```
 root@kali:~/Tools/responder# python Responder.py -I eth0 --basic
