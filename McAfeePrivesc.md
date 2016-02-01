@@ -4,7 +4,7 @@
 During an intern pentest, I came accross a nice way to privesc in an Active Directory domain.
 I owned an employee's laptop with [*McAfee Virusscan Enterprise 8.8*](http://www.mcafee.com/us/products/virusscan-enterprise.aspx) installed and a low privilege account.
 
-Mcafee has a feature to customize update servers and can connect to these servers via HTTP or SMB. (***C:\ProgramData\McAfee\Common Framework\***)**SiteList.xml** contains juicy informations like credentials, domain name servers, ... it looks like this :
+Mcafee has a feature to customize update servers and can connect to these servers via HTTP or SMB. (***C:\ProgramData\McAfee\Common Framework\***) **SiteList.xml** contains juicy informations like credentials, internals name, ... it looks like this :
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
