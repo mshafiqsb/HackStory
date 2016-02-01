@@ -2,11 +2,9 @@
 # McAfee privileged SiteList.xml leads to Active Directory domain privilege escalation
 
 During an intern pentest, I came accross a nice way to privesc in an Active Directory domain.
-
-I owned an employee's laptop with McAfee Virusscan Enterprise 8.8 installed.
+I owned an employee's laptop with McAfee Virusscan Enterprise 8.8 installed and a low privilege account.
 
 Mcafee has a feature to customize update servers and can connect to these servers via HTTP or SMB.
-
 The SiteList.xml contains juicy informations like credentials, domain name servers, ... it looks like this :
 
 ```
@@ -37,7 +35,7 @@ The SiteList.xml contains juicy informations like credentials, domain name serve
 </SiteList></ns:SiteLists>
 ```
 
-let's check which rights we got with *McAfeeService* :
+Let's check which rights we got with *McAfeeService* :
 
 ```
 PS C:\Users\TAirane> net user McAfeeService /domain
@@ -71,3 +69,6 @@ Global Group memberships      *Domain Services Account*Workstations Administrato
 The command completed successfully. 
 ```
 
+Ty !
+
+[@tfairane](https://twitter.com/tfairane)
