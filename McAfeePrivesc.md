@@ -7,6 +7,8 @@ I owned an employee's laptop with McAfee Virusscan Enterprise 8.8 installed and 
 Mcafee has a feature to customize update servers and can connect to these servers via HTTP or SMB.
 The file **SiteList.xml** in **C:\ProgramData\McAfee\Common Framework\** contains juicy informations like credentials, domain name servers, ... it looks like this :
 
+###### C:\ProgramData\McAfee\Common Framework\SiteList.xml
+
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <ns:SiteLists xmlns:ns="naSiteList" Type="Client">
