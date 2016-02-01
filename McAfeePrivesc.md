@@ -2,12 +2,9 @@
 # McAfee privileged SiteList.xml leads to Active Directory domain privilege escalation
 
 During an intern pentest, I came accross a nice way to privesc in an Active Directory domain.
-I owned an employee's laptop with *McAfee Virusscan Enterprise 8.8* installed and a low privilege account.
+I owned an employee's laptop with [*McAfee Virusscan Enterprise 8.8*](http://www.mcafee.com/us/products/virusscan-enterprise.aspx) installed and a low privilege account.
 
-Mcafee has a feature to customize update servers and can connect to these servers via HTTP or SMB.
-The file **SiteList.xml** contains juicy informations like credentials, domain name servers, ... it looks like this :
-
-#### C:\ProgramData\McAfee\Common Framework\SiteList.xml (victim)
+Mcafee has a feature to customize update servers and can connect to these servers via HTTP or SMB. (***C:\ProgramData\McAfee\Common Framework\***)**SiteList.xml** contains juicy informations like credentials, domain name servers, ... it looks like this :
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -74,8 +71,6 @@ The command completed successfully.
 Unfortunately the AV used GUI password, I couldn't edit the file. Thus, I downloaded and installed McAfee on my Windows Virtual Machine and just copied/pasted the previous precious sesame in my own SiteList.xml.
 
 At this time, I knew that It was close. I edited the file like I could force an HTTP connection to any random server that I could spoof using *Responder*. Actually the SiteList.xml looks like this :
-
-#### C:\ProgramData\McAfee\Common Framework\SiteList.xml (my own)
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
