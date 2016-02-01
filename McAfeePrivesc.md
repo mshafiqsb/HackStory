@@ -75,7 +75,7 @@ Unfortunately the AV used GUI password, I couldn't edit the file. Thus, I downlo
 
 At this time, I knew that It was close. I edited the file like I could force an HTTP connection to any random server that I could spoof using *Responder*. Actually the SiteList.xml looks like this :
 
-###### C:\ProgramData\McAfee\Common Framework\SiteList.xml (my own)
+#### C:\ProgramData\McAfee\Common Framework\SiteList.xml (my own)
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
