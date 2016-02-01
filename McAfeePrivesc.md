@@ -1,13 +1,13 @@
 
-# *McAfee* privileged SiteList.xml leads to *Active Directory* domain privilege escalation
+# McAfee privileged SiteList.xml leads to Active Directory domain privilege escalation
 
-During an intern pentest, I came accross a nice way to privesc in an *Active Directory* domain.
+During an intern pentest, I came accross a nice way to privesc in an Active Directory domain.
 I owned an employee's laptop with *McAfee Virusscan Enterprise 8.8* installed and a low privilege account.
 
-*Mcafee* has a feature to customize update servers and can connect to these servers via HTTP or SMB.
-The file *SiteList.xml* contains juicy informations like credentials, domain name servers, ... it looks like this :
+Mcafee has a feature to customize update servers and can connect to these servers via HTTP or SMB.
+The file **SiteList.xml** contains juicy informations like credentials, domain name servers, ... it looks like this :
 
-#### C:\ProgramData\McAfee\Common Framework\SiteList.xml
+#### C:\ProgramData\McAfee\Common Framework\SiteList.xml (victim)
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -37,7 +37,7 @@ The file *SiteList.xml* contains juicy informations like credentials, domain nam
 </SiteList></ns:SiteLists>
 ```
 
-Let's check which rights we got with *McAfeeService* :
+Let's check which rights we got with **McAfeeService** :
 
 ```
 PS C:\Users\TAirane> net user McAfeeService /domain
@@ -71,11 +71,11 @@ Global Group memberships      *Domain Services Account*Workstations Administrato
 The command completed successfully. 
 ```
 
-Unfortunately the AV used GUI password, I couldn't edit the file. Thus, I downloaded and installed *McAfee* on my *Windows* Virtual Machine and just copied/pasted the previous precious sesame in my own *SiteList.xml*.
+Unfortunately the AV used GUI password, I couldn't edit the file. Thus, I downloaded and installed McAfee on my Windows Virtual Machine and just copied/pasted the previous precious sesame in my own SiteList.xml.
 
 At this time, I knew that It was close. I edited the file like I could force an HTTP connection to any random server that I could spoof using *Responder*. Actually the SiteList.xml looks like this :
 
-###### C:\ProgramData\McAfee\Common Framework\SiteList.xml
+###### C:\ProgramData\McAfee\Common Framework\SiteList.xml (my own)
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -91,7 +91,7 @@ At this time, I knew that It was close. I edited the file like I could force an 
 </SiteList></ns:SiteLists>
 ```
 
-And *Responder* enters the dance :
+And *Responder* [enters the matrix](https://www.youtube.com/watch?v=NEuZgK669zY) :
 
 ```
 root@kali:~/Tools/responder# python Responder.py -I eth0 --basic
