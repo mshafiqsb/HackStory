@@ -1,6 +1,14 @@
 
 # McAfee privileged SiteList.xml leads to Active Directory domain privilege escalation
 
+#### 02/02/2015 UPDATE
+
+I have to say that agree with McAfee : this is not a security flaw in any McAfee product !
+
+And please, find best practices [here](https://kc.mcafee.com/corporate/index?page=content&id=KB86503).
+
+---
+
 During an intern pentest, I came accross a nice way to privesc in an Active Directory domain.
 I owned an employee's laptop with [**McAfee Virusscan Enterprise 8.8**](http://www.mcafee.com/us/products/virusscan-enterprise.aspx) installed and a low privilege account.
 
