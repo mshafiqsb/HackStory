@@ -3,9 +3,9 @@
 
 #### 02/02/2015 UPDATE
 
-I have to say that agree with McAfee : this is not a security flaw in any McAfee product !
+According to [McAfee's response](https://kc.mcafee.com/corporate/index?page=content&id=KB86503) : this is not a security flaw in McAfee's product !
 
-And please, find best practices [here](https://kc.mcafee.com/corporate/index?page=content&id=KB86503).
+For best practices [click here](https://kc.mcafee.com/corporate/index?page=content&id=KB86503).
 
 ---
 
