@@ -1,5 +1,5 @@
 
-# McAfee privileged SiteList.xml leads to Active Directory domain privilege escalation
+#### McAfee privileged SiteList.xml leads to Active Directory domain privilege escalation
 
 #### 02/02/2015 UPDATE
 
@@ -161,7 +161,5 @@ OMG, we got it ! Now, I can level up :) I can logon on the *Domain Controler* an
 Mission accomplished !
 
 ![McAfee](img/McAfee.jpg)
-
-Ty !
 
 [@tfairane](https://twitter.com/tfairane) Greetz [@Fr33ster](https://twitter.com/Fr33ster)
