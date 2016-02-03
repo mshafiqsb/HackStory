@@ -156,7 +156,7 @@ root@kali:~/Tools/responder# python Responder.py -I eth0 --basic
 [HTTP] Basic Password : *\cool_its_a_strong_password/*
 ```
 
-OMG, we got it ! Now, I can level up :) I can logon on the *Domain Controler* and access all workstations within the domain.
+OMG, we got it ! Now, I can level up :) I can logon on any *Domain Controler* and access all workstations within the domain.
 
 Mission accomplished !
 
