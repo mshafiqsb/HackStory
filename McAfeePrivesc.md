@@ -3,7 +3,7 @@
 
 #### 02/02/2015 UPDATE
 
-According to [Intel Security response](https://kc.mcafee.com/corporate/index?page=content&id=KB86503) : this is not a security flaw in McAfee's product !
+According with [Intel Security response](https://kc.mcafee.com/corporate/index?page=content&id=KB86503) : this is not a security flaw in McAfee's product !
 
 For best practices [click here](https://kc.mcafee.com/corporate/index?page=content&id=KB70999).
 
