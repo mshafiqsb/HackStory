@@ -189,8 +189,8 @@ On fait appel à la fonction func_00401488 pour déchiffrer la cipher en paramè
 Et on a gentillement le flag qui s'affiche dans ECX.
 
 ```
-00402179  44 34 6D 6E|65 64 5F 49|74 27 73 5F|4E 30 74 5F| D4mned_It's_N0t_
-00402189  55 50 58 00|                                     UPX
+00402179  44 34 6D 6E|65 64 5F 49|74 27 73 5F|4E 30 74 5F| FLAG_FLAG_FLAG
+00402189  55 50 58 00|                                     FLAG_FLAG_FLAG
 ```
 
 The end.
