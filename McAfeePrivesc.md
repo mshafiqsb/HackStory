@@ -8,7 +8,8 @@ Thanks to [@funoverip](https://twitter.com/funoverip) for his [password decrypti
 Thus for fun I tried to reverse the encryption process.
 
 ```
-; Extract the XOR key \x12\x15\x0f\x10\x11\x1c\x1a\x06\x0a\x1f\x1b\x18\x17\x16\x05\x19\x00\x00\x00\x00
+; Extract the XOR key
+; \x12\x15\x0f\x10\x11\x1c\x1a\x06\x0a\x1f\x1b\x18\x17\x16\x05\x19\x00\x00\x00\x00
 0x1001468e C645D812                        mov        byte [ss:ebp+var_28], 0x12
 0x10014692 C645D915                        mov        byte [ss:ebp+var_27], 0x15
 0x10014696 C645DA0F                        mov        byte [ss:ebp+var_26], 0xf
