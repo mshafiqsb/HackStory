@@ -1,7 +1,39 @@
 
 #### McAfee privileged SiteList.xml leads to Active Directory domain privilege escalation
 
-#### 02/02/2015 UPDATE
+#### 16/02/2016
+
+Thanks to [@funoverip](https://twitter.com/funoverip) for his [password decryption tool](https://github.com/funoverip/mcafee-sitelist-pwd-decryption)
+
+Thus for fun I tried to reverse the encryption process.
+
+```
+; Extract the XOR key \x12\x15\x0f\x10\x11\x1c\x1a\x06\x0a\x1f\x1b\x18\x17\x16\x05\x19\x00\x00\x00\x00
+0x1001468e C645D812                        mov        byte [ss:ebp+var_28], 0x12
+0x10014692 C645D915                        mov        byte [ss:ebp+var_27], 0x15
+0x10014696 C645DA0F                        mov        byte [ss:ebp+var_26], 0xf
+0x1001469a C645DB10                        mov        byte [ss:ebp+var_25], 0x10
+0x1001469e C645DC11                        mov        byte [ss:ebp+var_24], 0x11
+0x100146a2 C645DD1C                        mov        byte [ss:ebp+var_23], 0x1c
+0x100146a6 C645DE1A                        mov        byte [ss:ebp+var_22], 0x1a
+0x100146aa C645DF06                        mov        byte [ss:ebp+var_21], 0x6
+0x100146ae C645E00A                        mov        byte [ss:ebp+var_20], 0xa
+0x100146b2 C645E11F                        mov        byte [ss:ebp+var_1F], 0x1f
+0x100146b6 C645E21B                        mov        byte [ss:ebp+var_1E], 0x1b
+0x100146ba C645E318                        mov        byte [ss:ebp+var_1D], 0x18
+0x100146be C645E417                        mov        byte [ss:ebp+var_1C], 0x17
+0x100146c2 C645E516                        mov        byte [ss:ebp+var_1B], 0x16
+0x100146c6 C645E605                        mov        byte [ss:ebp+var_1A], 0x5
+0x100146ca C645E719                        mov        byte [ss:ebp+var_19], 0x19
+0x100146ce C645D300                        mov        byte [ss:ebp+var_2D], 0x0
+0x100146d2 C745C800000000                  mov        dword [ss:ebp+var_38], 0x0
+0x100146d9 C745BC00000000                  mov        dword [ss:ebp+var_44], 0x0
+0x100146e0 C745B400000000                  mov        dword [ss:ebp+var_4C], 0x0
+0x100146e7 8B4D08                          mov        ecx, dword [ss:ebp+arg_0]
+0x100146ea E811CCFEFF                      call       exp_?size@ABuffer@crypto@MA@mcafee_com@@QBEKXZ
+```
+
+#### 02/02/2016 UPDATE
 
 According with [Intel Security response](https://kc.mcafee.com/corporate/index?page=content&id=KB86503) : this is not a security flaw in McAfee's product !
 
@@ -162,4 +194,4 @@ Mission accomplished !
 
 ![McAfee](img/McAfee.jpg)
 
-[@tfairane](https://twitter.com/tfairane) Greetz [@Fr33ster](https://twitter.com/Fr33ster)
+[@tfairane](https://twitter.com/tfairane) greetz [@Fr33ster](https://twitter.com/Fr33ster)
