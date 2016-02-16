@@ -1,7 +1,7 @@
 
 #### McAfee privileged SiteList.xml leads to Active Directory domain privilege escalation
 
-#### 16/02/2016
+#### 16/02/2016 UPDATE
 
 Thanks to [@funoverip](https://twitter.com/funoverip) for his [password decryption tool](https://github.com/funoverip/mcafee-sitelist-pwd-decryption)
 
