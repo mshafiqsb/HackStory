@@ -5,7 +5,17 @@
 
 Thanks to [@funoverip](https://twitter.com/funoverip) for his [password decryption tool](https://github.com/funoverip/mcafee-sitelist-pwd-decryption)
 
-Thus for fun I tried to reverse the encryption process.
+Thus to increase my reverse skills I'm back.
+
+```
+Executable modules, item 6
+ Base=73EB0000
+ Size=00028000 (163840.)
+ Entry=73EB9B6F cryptshi.<ModuleEntryPoint>
+ Name=cryptshi
+ File version=2.7.0.815
+ Path=C:\Program Files (x86)\McAfee\Common Framework\cryptshim.dll
+```
 
 ```
 ; Extract the XOR key
