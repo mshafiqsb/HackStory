@@ -34,6 +34,8 @@ Thus for fun I tried to reverse the encryption process.
 0x100146ea E811CCFEFF                      call       exp_?size@ABuffer@crypto@MA@mcafee_com@@QBEKXZ
 ```
 
+---
+
 #### 02/02/2016 UPDATE
 
 According with [Intel Security response](https://kc.mcafee.com/corporate/index?page=content&id=KB86503) : this is not a security flaw in McAfee's product !
