@@ -1,6 +1,8 @@
 
 #### McAfee privileged SiteList.xml leads to Active Directory domain privilege escalation
 
+---
+
 #### 16/02/2016 UPDATE
 
 Thanks to [@funoverip](https://twitter.com/funoverip) for his [password decryption tool](https://github.com/funoverip/mcafee-sitelist-pwd-decryption)
@@ -53,6 +55,8 @@ According with [Intel Security response](https://kc.mcafee.com/corporate/index?p
 Find best practices [here](https://kc.mcafee.com/corporate/index?page=content&id=KB70999).
 
 ---
+
+#### Story
 
 During an intern pentest, I came accross a nice way to privesc in an Active Directory domain.
 I owned an employee's laptop with [**McAfee Virusscan Enterprise 8.8**](http://www.mcafee.com/us/products/virusscan-enterprise.aspx) installed and a low privilege account.
