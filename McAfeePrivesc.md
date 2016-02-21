@@ -50,9 +50,7 @@ Executable modules, item 6
 
 #### 02/02/2016 UPDATE
 
-According with [Intel Security response](https://kc.mcafee.com/corporate/index?page=content&id=KB86503) : this is not a security flaw in McAfee's product !
-
-Find best practices [here](https://kc.mcafee.com/corporate/index?page=content&id=KB70999).
+According with [Intel Security response](https://kc.mcafee.com/corporate/index?page=content&id=KB86503) : this is not a security flaw in McAfee's product ! Find best practices [here](https://kc.mcafee.com/corporate/index?page=content&id=KB70999).
 
 ---
 
