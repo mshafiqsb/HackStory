@@ -185,10 +185,13 @@ End Function
 
 Open Word or Excel > Option > activate "Developer" option
 
-Go to "Developer" menu > "Macros" and create new one.
+Go to "Developer" menu > "Macros" and create new one. 
+
+![macros](img/vba1.png)
 
 And copy paste our new Macro, run and enjoy your flags.
 
+![macros](img/vba2.png) ![macros](img/vba3.png)
 #### Note :
 
 Same shit for many dropper you can find in JavaScript or VBScript. If you have only 2 minutes to reverse the shit use dynamic analysis by changing Shell and Open functions with MsgBox (or console.log for JS). Its a question of productivity.
