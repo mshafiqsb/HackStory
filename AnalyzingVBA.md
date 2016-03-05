@@ -7,7 +7,7 @@ This article covers analysis a malicious word document.
 
 Requirement :
 * [OleTools](http://www.decalage.info/python/oletools)
-* Optionally Microsoft Office (Word/Excel)
+* Microsoft Office (Word/Excel)
 
 You can find the challenge here and the password is : `infected`
 
