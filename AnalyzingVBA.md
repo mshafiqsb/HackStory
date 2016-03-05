@@ -185,9 +185,9 @@ End Function
 
 ## Office shit ...
 
-Open Word or Excel > Option > activate "Developer" option. ![macros](img/vba1.png)
-
+Open Word or Excel > Option > activate "Developer" option.
 Go to "Developer" menu > "Macros" and create new one.
+![macros](img/vba1.png)
 
 And copy paste our new Macro, run and enjoy your flags.
 
