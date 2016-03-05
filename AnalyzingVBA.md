@@ -1,17 +1,17 @@
 # Analyzing malicious VBA Macro
-## Thanks to [hacklab-ESGI ](http://hacklab-esgi.fr) for the nice CTF
+## Thanks to [hacklab-ESGI ](http://hacklab-esgi.fr). It was a nice CTF.
 
 Yop yop,
 
 This article covers analysis a malicious word document.
+So, WORK IN SANDBOX.
 
 Requirement :
 * [OleTools](http://www.decalage.info/python/oletools)
 * Microsoft Office (Word/Excel)
+* The challenge `SHA1(Facture.zip)= 124a321f44bd66469a2215a1a0d3ff59aad002cf`
 
 You can find the challenge here and the password is : `infected`
-
-`SHA1(Facture.zip)= 124a321f44bd66469a2215a1a0d3ff59aad002cf`
 
 ## Extract malicious VBA
 
@@ -153,4 +153,14 @@ End Function
 |            | Strings              | may be used to obfuscate strings        |
 |            |                      | (option --decode to see all)            |
 +------------+----------------------+-----------------------------------------+
+```
+
+## Innocent Payload
+
+Change harmful with innocent function.
+
+```
+Public Function pabhVHVasd()
+pabhVHVasd = MsgBox(xCPgNnfrZfuCcsDdgAitdfoEbQIbnRHmu("fyf/hojlmbobojuvq0&QNU&!usbut!d0!end"), vbHide)
+End Function
 ```
