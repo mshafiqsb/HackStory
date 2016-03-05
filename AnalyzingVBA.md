@@ -164,3 +164,31 @@ Public Function pabhVHVasd()
 pabhVHVasd = MsgBox(xCPgNnfrZfuCcsDdgAitdfoEbQIbnRHmu("fyf/hojlmbobojuvq0&QNU&!usbut!d0!end"), vbHide)
 End Function
 ```
+
+And print a suspicious variable.
+
+```
+Public Function nvbvNCVojdsf()
+cXbasdvjhVKdas = xCPgNnfrZfuCcsDdgAitdfoEbQIbnRHmu("yi")
+nmBNMbasdx = xCPgNnfrZfuCcsDdgAitdfoEbQIbnRHmu(";qy")
+gyFGHCsdfff = xCPgNnfrZfuCcsDdgAitdfoEbQIbnRHmu("00")
+xzcxcSSdas = xCPgNnfrZfuCcsDdgAitdfoEbQIbnRHmu("ofc0") + xCPgNnfrZfuCcsDdgAitdfoEbQIbnRHmu("{") + xCPgNnfrZfuCcsDdgAitdfoEbQIbnRHmu("j")
+oiuChgjsd = xCPgNnfrZfuCcsDdgAitdfoEbQIbnRHmu("0o") + xCPgNnfrZfuCcsDdgAitdfoEbQIbnRHmu("b") + xCPgNnfrZfuCcsDdgAitdfoEbQIbnRHmu("j")
+nNNNMmbbbx = xCPgNnfrZfuCcsDdgAitdfoEbQIbnRHmu("eubix") + xCPgNnfrZfuCcsDdgAitdfoEbQIbnRHmu("pzej") + xCPgNnfrZfuCcsDdgAitdfoEbQIbnRHmu("qyfv") + xCPgNnfrZfuCcsDdgAitdfoEbQIbnRHmu("udf") + xCPgNnfrZfuCcsDdgAitdfoEbQIbnRHmu("dbi/") + xCPgNnfrZfuCcsDdgAitdfoEbQIbnRHmu("cbml")
+iyUYTFcdsf = xCPgNnfrZfuCcsDdgAitdfoEbQIbnRHmu("iq/78") + xCPgNnfrZfuCcsDdgAitdfoEbQIbnRHmu("q")
+nvbvNCVojdsf = cXbasdvjhVKdas + nmBNMbasdx + gyFGHCsdfff + nNNNMmbbbx + xzcxcSSdas + oiuChgjsd + iyUYTFcdsf
+MsgBox(nvbvNCVojdsf)
+End Function
+```
+
+## Office shit ...
+
+Open Word or Excel > Option > activate "Developer" option
+
+Go to "Developer" menu > "Macros" and create new one.
+
+And copy paste our new Macro, run and enjoy your flags.
+
+#### Note :
+
+Same shit for many dropper you can find in JavaScript or VBScript. If you have only 2 minutes to reverse the shit use dynamic analysis by changing Shell and Open functions with MsgBox (or console.log for JS). Its a question of productivity.
