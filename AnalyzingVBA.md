@@ -198,4 +198,4 @@ And copy paste our new Macro, run and enjoy your flags.
 
 #### Note :
 
-Same shit for many dropper you can find in JavaScript or VBScript. If you have only 2 minutes to reverse the shit use dynamic analysis by changing Shell and Open functions with MsgBox (or console.log for JS). Its a question of productivity.
+Same shit for many droppers you can find in JavaScript or VBScript. If you have only 2 minutes to reverse, use dynamic analysis by changing `Shell` and `Open` functions with `MsgBox` (or `console.log` for JS). Question of productivity.
