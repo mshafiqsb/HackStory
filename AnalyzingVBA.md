@@ -1,5 +1,5 @@
 # Analyzing malicious VBA Macro
-## Thanks to [hacklab-ESGI ](http://hacklab-esgi.fr). It was a nice CTF.
+## Thanks to [hacklab-ESGI](http://hacklab-esgi.fr). It was a nice CTF.
 
 Yop yop,
 
