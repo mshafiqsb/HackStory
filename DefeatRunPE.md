@@ -1,8 +1,8 @@
-# Defeat RunPE Packer
+# Defeat RunPE Packer (Challenge)
 
 Requirement :
 
-* Ollydbg v2
+* Ollydbg
 * [OllyDumpEx Plugin](http://low-priority.appspot.com/ollydumpex/)
 * Un cerveau avec des connaissances sur [RunPE](https://gist.github.com/tfairane/034167792e8d1b044273)
 
@@ -162,7 +162,7 @@ On va utiliser deux instances de Ollydbg :
 
 ![runpe2](./img/runpe1.jpg)
 
-On s'attache au process suspendu et on dump le PE à l'image base 00400000.
+On s'attache au process suspendu et on dump le PE à l'image base ```0x00400000```.
 
 ![runpe3](./img/runpe2.jpg)
 
