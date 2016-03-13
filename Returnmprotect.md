@@ -4,7 +4,7 @@
 
 #### We are in the era of high complexity to bypass mitigation against memory corruption.
 
-**Ret2mprotect** is an elegant way to bypass mitigation like **NX/DEP** by jumping on ```mprotect()``` to set executable/read/write memory page.
+**Ret2mprotect** is an elegant way to bypass mitigation like **NX/DEP** by jumping on ```mprotect()``` to set memory page's flags.
 
 I assume that you're confortable with stack-based overflow, ASM and shellcode.
 
