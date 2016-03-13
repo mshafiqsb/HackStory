@@ -121,4 +121,4 @@ Start      End        Perm  Name
 0xfffdd000 0xffffe000 rwxp	[stack]
 ```
 
-@tfairane greetz @barrebas
+[@tfairane](https://twitter.com/tfairane) greetz [@barrebas](https://twitter.com/barrebas)
