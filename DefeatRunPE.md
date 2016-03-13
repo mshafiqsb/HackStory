@@ -170,7 +170,7 @@ Ce qui nous donne un nouveau binaire tout beau, tout propre :3
 
 ## III ) Strcmp et final round
 
-EAX correspond à l'input ```argv0```.
+```EAX``` correspond à l'input ```argv0```.
 
 ```
 00401527  |.  68 79214000   PUSH OFFSET 00402179                     ; /string2 = "sc>?650xEVD0}_E0&!)"
@@ -178,7 +178,7 @@ EAX correspond à l'input ```argv0```.
 0040152D  |.  E8 A2020000   CALL <JMP.&msvcrt.strcmp>                ; \MSVCRT.strcmp
 ```
 
-On fait appel à la fonction func_00401488 pour déchiffrer la cipher en paramètre.
+On fait appel à la fonction ```func_00401488``` pour déchiffrer la cipher en paramètre.
 
 ```
 00401527  |.  68 79214000   PUSH OFFSET 00402179                     ; string2 = "sc>?650xEVD0}_E0&!)"
@@ -186,7 +186,7 @@ On fait appel à la fonction func_00401488 pour déchiffrer la cipher en paramè
 0040152D      E8 56FFFFFF   CALL 00401488
 ```
 
-Et on a gentillement le flag qui s'affiche dans ECX.
+Et on a gentillement le flag qui s'affiche dans ```ECX```.
 
 ```
 00402179  44 34 6D 6E|65 64 5F 49|74 27 73 5F|4E 30 74 5F| FLAG_FLAG_FLAG
