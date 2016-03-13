@@ -4,14 +4,15 @@
 
 #### We are in the era of high complexity to bypass mitigation against memory corruption.
 
-**Ret2mprotect** is an elegant way to bypass mitigation like **NX/DEP** by jumping on ```mprotect()``` to set memory protection.
+**Ret2mprotect** is an elegant way to bypass mitigation like **NX/DEP** by using ```mprotect()``` to set memory protection.
 
-I assume that you're confortable with stack-based overflow, ASM and shellcode.
+I assume that you are confortable with x86 stack-based overflow, ASM and shellcode.
 
 Let's take a vanilla sample :
 
 ```
-#include<stdio.h> #include<stdlib.h>
+#include<stdio.h>
+#include<stdlib.h>
 
 int main() {
     char name[512];
@@ -21,7 +22,7 @@ int main() {
 }
 ```
 
-Compile it with explicit no executable stack flag for x86 architecture.
+Compile with explicit *noexecutable stack* flag.
 
 ```
 $ gcc -m32 pwnme.c -o pwnme -znoexecstack
@@ -31,8 +32,8 @@ $ file pwnme exploitme: ELF 32-bit LSB executable, Intel 80386, version 1
 BuildID[sha1]=0x19883d935e336675dd19ceb894dc09fd15e5903c, not stripped
 ```
 
-Basically, same methodology for any stack-based overflow by creating a unique pattern (using *metasploit*).
-We will override EIP at offset 524.
+Basically, same methodology for any x86 stack-based overflow by creating a unique pattern (I use *metasploit*).
+We will override ```EIP``` at ```offset 524```.
 
 ```
 $ /usr/share/metasploit-framework/tools/pattern_create.rb 999 > /tmp/in
