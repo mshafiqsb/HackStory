@@ -1,7 +1,5 @@
 ## ROP : pointer leaking + return-into-mprotect()
 
-- - -
-
 #### We are in the era of high complexity to bypass mitigation against memory corruption.
 
 **Ret2mprotect** is an elegant way to bypass mitigation like **NX/DEP** by using ```mprotect()``` to set memory protection.
