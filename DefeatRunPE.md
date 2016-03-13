@@ -170,7 +170,7 @@ Ce qui nous donne un nouveau binaire tout beau, tout propre :3
 
 ## III ) Strcmp et final round
 
-Ici, EAX est l'input de argv0.
+EAX correspond à l'input ```argv0```.
 
 ```
 00401527  |.  68 79214000   PUSH OFFSET 00402179                     ; /string2 = "sc>?650xEVD0}_E0&!)"
