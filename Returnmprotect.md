@@ -57,7 +57,7 @@ Start      End        Perm  Name
 
 Assuming that **ASLR** is disabled.
 
-The address of ```mprotect()``` : ```0xf7f2d2e0```
+The address of ```mprotect()``` is ```0xf7f2d2e0```
 
 ```
 gdb-peda$ p mprotect $1 = {<text variable, no debug info>} 0xf7f2d2e0 <mprotect>
