@@ -1,6 +1,4 @@
-## Defeat RunPE Packer
-
-- - -
+# Defeat RunPE Packer
 
 Requirement :
 
