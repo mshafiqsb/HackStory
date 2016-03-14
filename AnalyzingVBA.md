@@ -189,12 +189,16 @@ Open Word or Excel > Option > activate "Developer" option.
 
 Go to "Developer" menu > "Macros" and create new one.
 
-![macros](img/vba1.png)
+<p align="center">
+<img width="45%" src="img/vba1.png"/>
+</p>
 
 And copy paste our new Macro, run and enjoy your flags.
 
-![macros](img/vba2.png)
-![macros](img/vba3.png)
+<p align="center">
+<img width="45%" src="img/vba2.png"/>
+<img width="45%" src="img/vba3.png"/>
+</p>
 
 #### Note :
 
