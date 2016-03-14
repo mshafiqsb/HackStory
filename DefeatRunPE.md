@@ -160,11 +160,15 @@ On va utiliser deux instances de Ollydbg :
 * La première va s'arrêter sur kernel32.ResumeThread.
 * La seconde instance de Ollygdb va s'attacher au processus suspendu et dumper le binaire.
 
-![runpe2](./img/runpe1.jpg)
+<p align="center">
+<img src="img/runpe1.jpg"/>
+</p>
 
 On s'attache au process suspendu et on dump le PE à l'image base ```0x00400000```.
 
-![runpe3](./img/runpe2.jpg)
+<p align="center">
+<img src="img/runpe2.jpg"/>
+</p>
 
 Ce qui nous donne un nouveau binaire tout beau, tout propre :3
 
