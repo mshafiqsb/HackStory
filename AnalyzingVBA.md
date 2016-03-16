@@ -1,5 +1,8 @@
 # Analyzing malicious VBA Macro
+
 ## Thanks to [hacklab-ESGI](http://hacklab-esgi.fr). It was a nice CTF.
+
+- - -
 
 Yop yop,
 
@@ -199,8 +202,6 @@ And copy paste our new Macro, run and enjoy your flags.
 <img height="200px" width="300px" src="img/vba2.png"/>
 <img height="200px" width="330px" src="img/vba3.png"/>
 </p>
-
-#### Note :
 
 Same shit for many droppers you can find in JavaScript or VBScript. If you have only 2 minutes to reverse, use dynamic analysis by changing `Shell` and `Open` functions with `MsgBox` (or `console.log` for JS).
 
