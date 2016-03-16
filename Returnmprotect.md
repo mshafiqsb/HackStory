@@ -2,6 +2,8 @@
 
 #### We are in the era of high complexity to bypass mitigation against memory corruption.
 
+- - -
+
 **Ret2mprotect** is an elegant way to bypass mitigation like **NX/DEP** by using ```mprotect()``` to set memory protection.
 
 I assume that you are confortable with x86 stack-based overflow, ASM and shellcode.
