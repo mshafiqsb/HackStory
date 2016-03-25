@@ -1,6 +1,6 @@
 # Advanced Hacking Stories
 
-:) hack for fun, hack for life (:
+:) hack for fun, hack to live (:
 
 [Defeat RunPE Challenge](https://github.com/tfairane/HackStory/blob/master/DefeatRunPE.md)
 
