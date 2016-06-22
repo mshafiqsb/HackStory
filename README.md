@@ -9,3 +9,5 @@
 [Analyzing malicious VBA Macro](https://github.com/tfairane/HackStory/blob/master/AnalyzingVBA.md)
 
 [Return into mprotect()](https://github.com/tfairane/HackStory/blob/master/Returnmprotect.md)
+
+[Hack 100.000$ with one line Bash ~ freaky PayPal API (educational purpose only)](https://github.com/tfairane/HackStory/blob/master/PayPalNVP.md)
